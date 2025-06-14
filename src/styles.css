@@ -1,0 +1,256 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%);
+    color: #fff;
+    min-height: 100vh;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  
+  /* Başlık */
+  .header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  }
+  .header p {
+    font-size: 1.2rem;
+  }
+  
+  /* Form */
+  .form-container {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    padding: 24px;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    margin-bottom: 30px;
+  }
+  
+  .input-group {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+  
+  .input-field {
+    flex: 1;
+    min-width: 150px;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.3);
+    color: #000000;
+    font-size: 1rem;
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+
+  .input-field button :hover{
+    background-color: #1CD8D2;
+    transform: scale(1.1);
+  }
+  
+  .input-field::placeholder {
+    color: #e0e0e0;
+  }
+  
+  .input-field:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.6);
+  }
+  
+  /* Buton */
+  .btn-primary {
+    width: 100%;
+    padding: 14px;
+    margin-top: 12px;
+    background: linear-gradient(135deg, #1CD8D2 0%, #93EDC7 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .btn-primary:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  select.input-field {
+    appearance: none;
+  }
+  
+  /* Liste */
+  .transaction-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .transaction-item {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    border-left: 5px solid #4caf50;
+    padding: 18px;
+    border-radius: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    transition: transform 0.2s ease;
+  }
+  
+  .transaction-item:hover {
+    transform: translateX(6px);
+  }
+  
+  .transaction-item.expense {
+    border-color: #ff5252;
+  }
+  
+  .transaction-info time {
+    font-size: 0.9rem;
+    color: #ddd;
+  }
+  .transaction-info p {
+    margin: 6px 0;
+    color: #fff;
+  }
+  .transaction-info .amount {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .btn-delete {
+    background: transparent;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: #eee;
+    transition: color 0.2s ease;
+  }
+  .btn-delete:hover {
+    color: #ff5252;
+  }
+/* Tüm input alanlarında yazı rengi beyaz */
+input,
+select,
+textarea {
+  color: #fff !important;
+}
+
+/* Tarih alanı kutusu da beyaz yazı ve şeffaf arka plan */
+input[type="date"] {
+  color: #fff !important;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 1rem;
+}
+
+/* Tarih inputu içindeki yazı kısmı */
+input[type="date"]::-webkit-datetime-edit {
+  color: #fff !important;
+}
+
+/* Takvim ikonu beyaz görünsün diye ters çevrilir */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: brightness(0) invert(1);
+}
+
+.date-filter {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.pagination button {
+  padding: 10px 18px;
+  font-size: 1rem;
+  font-weight: 500;
+  background: #00C49F;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.pagination button:hover {
+  background: #00a885;
+}
+
+.pagination button:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+  opacity: 0.6;
+  box-shadow: none;
+}
+
+.pagination span {
+  font-weight: 600;
+  font-size: 1rem;
+  color: white;
+}
+
+.btn-file {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
+
+.btn-file:hover {
+  background-color: #3730a3;
+}
+
+.input-field:hover{
+  background-color: #3730a3;
+
+}
+
+@media (max-width: 396px) {
+  .btn-file:first-of-type {
+    display: flex;
+    width: fit-content;
+    margin: 0px 0px 20px 0px; /* üst boşluk + soldan kayma */
+    min-width: 140px;
+  }
+}
+
+
